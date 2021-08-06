@@ -1,0 +1,6 @@
+/node_modules
+/client/theme/fullstack-theme-master
+.env
+config
+
+client/src/theme/fullstack-theme-master

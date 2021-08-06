@@ -1,0 +1,1 @@
+Fullstack приложение в котором используется фреймворк Angular и express для nodejs,а также  БД mongoDB.
