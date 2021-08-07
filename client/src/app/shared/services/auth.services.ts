@@ -9,6 +9,7 @@ import { User } from '../interfaces';
     providedIn: 'root'
 })
 export class AuthService {
+
     private token: null | string = null
 
     constructor(private http: HttpClient) {
@@ -26,7 +27,7 @@ export class AuthService {
         this.token = token
         console.log(this.token)
     }
-    getToken(token: string) {
+    getToken() {
         return this.token
     }
 
@@ -39,5 +40,7 @@ export class AuthService {
         localStorage.clear()
     }
 
-    register() { }
+    register(user: User): Observable<User> {
+        return this.http.post<User>('/api/auth/register', user)
+    }
 }
