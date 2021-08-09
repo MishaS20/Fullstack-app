@@ -15,17 +15,22 @@ export class AuthService {
     constructor(private http: HttpClient) {
     }
 
+
+    register(user: User): Observable<User> {
+        return this.http.post<User>('/api/auth/register', user)
+    }
+
     login(user: User): Observable<{ token: string }> {
         return this.http.post<{ token: string }>('/api/auth/login', user)
             .pipe(tap(({ token }) => {
                 localStorage.setItem('auth-token', token)
                 this.setToken(token)
             }))
+
     }
 
-    setToken(token: string) {
+    setToken(token: string | null) {
         this.token = token
-        console.log(this.token)
     }
     getToken() {
         return this.token
@@ -40,7 +45,4 @@ export class AuthService {
         localStorage.clear()
     }
 
-    register(user: User): Observable<User> {
-        return this.http.post<User>('/api/auth/register', user)
-    }
 }
