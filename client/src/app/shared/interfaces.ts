@@ -13,3 +13,9 @@ export interface Category {
 export interface Message {
     message: string
 }
+export interface Position {
+    title: string,
+    category: string,
+    user?: string,
+    _id?: string,
+}

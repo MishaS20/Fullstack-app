@@ -42,7 +42,7 @@ module.exports.delete = async function (req, res) {
 
 module.exports.update = async function (req, res) {
     try {
-        const position = Positions.findOneAndUpdate(
+        const position = await Positions.findOneAndUpdate(
             { _id: req.params.id },
             { $set: req.body },
             { new: true }

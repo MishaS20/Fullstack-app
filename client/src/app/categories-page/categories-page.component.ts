@@ -8,6 +8,7 @@ import { CategoriesService } from '../shared/services/categories.services';
     templateUrl: './categories-page.component.html',
     styleUrls: ['./categories-page.component.css']
 })
+
 export class CategoriesPageComponent implements OnInit {
 
     categories$: Observable<Category[]>
