@@ -1,3 +1,16 @@
 h4 {
     text-align: center;
+    display: block;
+    margin: 0;
+    display: block;
+    padding-block-start: 1.2em;
+    padding-block-end: 1.2em;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+}
+.sidenav {
+    background-color: #c7c4c4;
+}
+.bg {
+    background-color: #747474;
 }

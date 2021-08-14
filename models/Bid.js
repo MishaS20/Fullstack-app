@@ -4,17 +4,20 @@ const Schema = mongoose.Schema
 const bidSchema = new Schema({
     list: [{
         name: {
-            type: Number,
-            reqired: true
+            type: String,
         },
         summ: {
             type: Number,
-            reqired: true
         },
         coefficient: {
             type: Number,
-            reqired: true
         },
+        result: {
+            type: String,
+        },
+        win: {
+            type: Number
+        }
     }],
 
     order: {

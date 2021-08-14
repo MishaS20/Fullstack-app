@@ -2,6 +2,7 @@
     <div class="card-content">
         <span class="card-title">Создать аккаунт</span>
         <div class="input-field">
+            <i class="material-icons prefix">person</i>
             <input formControlName="email" id="email" type="email"
                 [ngClass]="{'invalid':form.get('email').invalid && form.get('email').touched}">
             <label for="email">Email:</label>
@@ -11,6 +12,7 @@
             </span>
         </div>
         <div class="input-field">
+            <i class="material-icons prefix">lock</i>
             <input formControlName="password" id="password" type="password"
                 [ngClass]="{'invalid':form.get('password').invalid && form.get('password').touched}">
             <label for="password">Пароль:</label>

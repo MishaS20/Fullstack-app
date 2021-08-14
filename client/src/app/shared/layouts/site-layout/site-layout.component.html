@@ -1,11 +1,16 @@
 <!--SIDEBAR-->
 <ul class="sidenav sidenav-fixed a-sidenav">
-    <h4>1Lis</h4>
+    <div class="bg">
+        <h4>
+            TestGo
+        </h4>
+    </div>
+
     <li class="bold" routerLinkActive="active" *ngFor="let link of links">
         <a [routerLink]="[link.url]" class="waves-effect waves-orange">{{link.name}}</a>
     </li>
     <li class="bold last">
-        <a href="#" class="waves-effect waves-orange" (click)="logout($event)">
+        <a href="#" class="waves-effect waves-orange bg " (click)="logout($event)">
             Выйти</a>
     </li>
 </ul>

@@ -18,4 +18,25 @@ export interface Position {
     category: string,
     user?: string,
     _id?: string,
+    result?: string,
+    summ?: number,
+    win?: number,
+    coefficient?: number,
+}
+
+export interface Bid {
+    list: BidPosition[],
+    date?: Date,
+    order?: number,
+    user?: string,
+    _id?: string
+}
+
+export interface BidPosition {
+    name: string,
+    summ: number,
+    coefficient: number,
+    result: string
+    win: number,
+    _id?: string
 }
