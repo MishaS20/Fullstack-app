@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Bid, BidPosition, Position } from "../interfaces";
@@ -35,6 +35,15 @@ export class BidService {
         this.list.splice(idx, 1)
         this.computeWinAndLoseSumm()
     }
+
+    fetch(params: any = {}): Observable<Bid[]> {
+        return this.http.get<Bid[]>('/api/bid', {
+            params: new HttpParams({
+                fromObject: params
+            })
+        })
+    }
+
     clear() {
         this.list = []
         this.summWin = 0

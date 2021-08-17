@@ -40,3 +40,9 @@ export interface BidPosition {
     win: number,
     _id?: string
 }
+
+export interface Filter {
+    start?: Date,
+    end?: Date,
+    order?: number
+}
