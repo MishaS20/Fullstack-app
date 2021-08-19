@@ -1,9 +1,10 @@
 const express = require('express')
+const passport = require('passport')
 const controller = require('../controllers/analytics')
 const router = express.Router()
 
-router.get('/overview', controller.overview);
-router.get('/countbid', controller.countBid);
-router.get('/effectivebid', controller.effectiveBid);
+router.get('/overview', passport.authenticate('jwt', { session: false }), controller.overview);
+router.get('/analytics', passport.authenticate('jwt', { session: false }), controller.analytics);
+router.get('/effectivebid', passport.authenticate('jwt', { session: false }), controller.effectiveBid);
 
 module.exports = router;

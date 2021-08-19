@@ -32,6 +32,9 @@ export class MaterialService {
     static initTooltip(ref: ElementRef): MaterialInstance {
         return M.Tooltip.init(ref.nativeElement)
     }
+    static initTapTarget(ref: ElementRef): MaterialInstance {
+        return M.TapTarget.init(ref.nativeElement)
+    }
 
     static initDatePicker(ref: ElementRef, onClose: () => void) {
         return M.Datepicker.init(ref.nativeElement, {
